@@ -27,11 +27,11 @@ const UserDetails = ({ user }: Props) => {
                     </div>
                     <div className="d-flex py-1">
                         <span className="pe-2">Age: </span>
-                        <span>age</span>
+                        <span>{user.dob.age}</span>
                     </div>
                     <div className="d-flex py-1">
                         <span className="pe-2">Country: </span>
-                        <span>country</span>
+                        <span>{user.location.country}</span>
                     </div>
 
                 </Card.Body>
