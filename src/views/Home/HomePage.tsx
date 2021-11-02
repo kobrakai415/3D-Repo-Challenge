@@ -18,7 +18,8 @@ const HomePage = ({ users, error }: Props) => {
 
         const userBeingSearchedFor: User[] = users.filter(user => user.login.username.includes(query))
         console.log(userBeingSearchedFor)
-        userBeingSearchedFor.length > 0 ? setFilterededUsers(userBeingSearchedFor) : setUserDoesNotExist(true)
+        setFilterededUsers(userBeingSearchedFor)
+        if (userBeingSearchedFor.length === 0) setUserDoesNotExist(true)
 
 
     }, [query, users])
@@ -30,20 +31,20 @@ const HomePage = ({ users, error }: Props) => {
                     <SearchBar query={query} setQuery={setQuery} />
 
                     {
-                        users && users.length > 0 ?
+                        filteredUsers.length > 0 ?
                             filteredUsers.map((user) => <UserThumbnail key={user.login.uuid} user={user} />)
 
                             : null
                     }
                     {
-                        users.length === 0 && userDoesNotExist && query.length > 0 ?
-                            <h3 className="centered">user {query} does not exist</h3>
+                        filteredUsers.length === 0 && userDoesNotExist ?
+                            <h3 className="centered d-flex justify-content-center">User "{query}" does not exist</h3>
                             : null
 
                     }
                     {
                         error ?
-                            <h3 className="centered">Oops something went wrong with the API! PLease try again or contact support!</h3>
+                            <h3 className="centered d-flex justify-content-center">Oops something went wrong with the API! PLease try again or contact support!</h3>
                             : null
                     }
                 </Row>
