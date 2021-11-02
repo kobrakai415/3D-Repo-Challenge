@@ -48,15 +48,18 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar/>
-      <Container className="p-md-5 pt-md-0">
-        <Row>
-          <Router>
-            <Route path="/" exact render={() => <HomePage users={users} error={error} />} />
-            <Route path="/:userName" exact render={() => <UserPage users={users} error={error} />} />
-          </Router>
-        </Row>
-      </Container>
+      <Navbar />
+      {loading ? <img className="centered" src="/spinner.svg" height={300} width={300} alt="loader" />
+        :
+        <Container className="p-md-5 pt-md-0">
+          <Row>
+
+            <Router>
+              <Route path="/" exact render={() => <HomePage users={users} error={error} />} />
+              <Route path="/:userName" exact render={() => <UserPage users={users} error={error} />} />
+            </Router>
+          </Row>
+        </Container>}
     </div>
   );
 }
