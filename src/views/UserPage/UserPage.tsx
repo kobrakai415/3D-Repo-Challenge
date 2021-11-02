@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
 
-const UserPage = () => {
+interface Props {
+    users: User[] | null;
+    error: boolean;
+}
+
+const UserPage = ({ users }: Props) => {
 
     return (
         <>

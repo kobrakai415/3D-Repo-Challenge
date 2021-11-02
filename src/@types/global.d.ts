@@ -29,6 +29,3 @@ interface User {
   picture: Picture;
 }
 
-interface Users {
-  results: User[];
-}
