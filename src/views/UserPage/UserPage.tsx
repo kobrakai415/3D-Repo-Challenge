@@ -1,9 +1,9 @@
-import { setupMaster } from "cluster";
 import { useEffect, useState } from "react";
-import { Row, Col, Button } from 'react-bootstrap';
+import { Col, Button } from 'react-bootstrap';
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import UserDetails from "../../components/UserDetails/UserDetails";
+import { IoMdArrowRoundBack } from 'react-icons/io';
 
 interface Props {
     users: User[] | [];
@@ -30,8 +30,9 @@ const UserPage = ({ users }: Props) => {
             <Col xs={12}>
                 <div>
                     <Link to="/">
-                        <Button>
-                            Go Back
+                        <Button >
+                            <IoMdArrowRoundBack className="me-2" style={{ fontSize: "30px" }} />
+
                         </Button>
                     </Link>
                     {user ?

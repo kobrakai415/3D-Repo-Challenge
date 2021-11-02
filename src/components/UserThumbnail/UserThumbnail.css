@@ -2,8 +2,11 @@
   border-bottom: 1px rgba(139, 139, 139, 0.486) solid;
   background-color: white;
   border-radius: 40px 10px 10px 10px;
-  -webkit-box-shadow: 2px 2px 9px -8px rgba(153, 153, 153, 0.2);
-  box-shadow: 2px 2px 9px -8px rgba(153, 153, 153, 0.2);
+  -webkit-box-shadow: 2px 2px 9px -5px rgba(153,153,153,0.2); 
+  box-shadow: 2px 2px 9px -5px rgba(153,153,153,0.2);
+}
+.user-thumbnail:hover {
+  transform: scale(1.05);
 }
 .user-thumbnail img {
   box-shadow: 0 3px 10px -1px rgba(0, 0, 0, 0.125);

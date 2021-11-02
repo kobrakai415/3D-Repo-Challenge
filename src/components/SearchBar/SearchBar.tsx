@@ -10,6 +10,7 @@ const SearchBar = ({ query, setQuery }: Props) => {
     return (
         <Col xs={12}>
             <div className="py-3">
+                <h2>Search</h2>
                 <div id="search-bar-parent">
                     <input id="search-bar" value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Find a staff member ... " />
                     <svg className="search-bar-glass" viewBox="0 0 512 512" width="24" height="24" xmlns="http://www.w3.org/2000/svg">

@@ -8,7 +8,7 @@ const UserDetails = ({ user }: Props) => {
 
     return (
         <div className="d-flex p-3 justify-content-center">
-            <Card style={{ minWidth: "300px" }}>
+            <Card style={{ maxWidth: "300px", width: "100%" }}>
                 <img src={user.picture.large} alt="user-image" />
                 <Card.Body>
                     <div className="d-flex py-1">

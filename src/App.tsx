@@ -5,6 +5,8 @@ import { Container, Row } from 'react-bootstrap';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import HomePage from './views/Home/HomePage';
 import UserPage from './views/UserPage/UserPage';
+import Navbar from './components/Navbar/Navbar';
+
 
 const ApiUrl = process.env.REACT_APP_USERS_API
 
@@ -46,14 +48,13 @@ function App() {
 
   return (
     <div className="App">
-      <Container className="p-md-5">
+      <Navbar/>
+      <Container className="p-md-5 pt-md-0">
         <Row>
-
           <Router>
             <Route path="/" exact render={() => <HomePage users={users} error={error} />} />
             <Route path="/:userName" exact render={() => <UserPage users={users} error={error} />} />
           </Router>
-
         </Row>
       </Container>
     </div>
