@@ -4,3 +4,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.App{
+  background-color: #F3F9FF;
+  min-height: 100vh;
+}
