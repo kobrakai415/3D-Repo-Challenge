@@ -23,7 +23,7 @@ const UserPage = ({ users }: Props) => {
         console.log(user)
         user ? setUser(user) : setError(true)
 
-    }, [users])
+    }, [users, userName])
 
     return (
         <>
