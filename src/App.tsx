@@ -10,7 +10,7 @@ const ApiUrl = process.env.REACT_APP_USERS_API
 
 function App() {
 
-  const [users, setUsers] = useState<User[] | null>(null)
+  const [users, setUsers] = useState<User[] | []>([])
   const [loading, setLoading] = useState<boolean>(false)
   const [error, setError] = useState<boolean>(false)
 
@@ -46,7 +46,7 @@ function App() {
 
   return (
     <div className="App">
-      <Container className="p-5">
+      <Container className="p-md-5">
         <Row>
 
           <Router>

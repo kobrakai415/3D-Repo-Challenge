@@ -10,7 +10,7 @@ interface Props {
 const UserThumbnail = ({ user }: Props) => {
 
     return (
-        <Col xs={6}>
+        <Col md={6}>
             <div className="user-thumbnail d-flex py-3">
                 <img className="rounded-circle" height={50} width={50} src={user.picture.thumbnail} alt="user-img" />
                 <div className="d-flex flex-column align-items-start px-3">
